@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Zumba</title>
+<link href="Bootstrap/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-3" style="border:solid hidden; height:120px; background-image:url(images/menu_bg.png)">
+<a href="Home.php"><img src="images/LOGO_fit.png" /></a>
+</div>
+<div class="col-lg-9" style="border:solid hidden; height:120px; background-image:url(images/menu_bg.png)">
+<p style="padding-right:20px"> <a id="sukh" href="Home.php" style="text-decoration:none; color:black; padding-right:30px">
+<h2 style="text-align:right; padding-top:5px"> Home </h2></a></p>
+
+</div>
+
+</div>
+
+<div class="row">
+<div class="col-lg-12" style="border:solid hidden; height:400px; background-image:url(images/zumbaa.jpg); width:100%">
+<div class="row" style="border:solid hidden; height:340px"></div>
+<div class="row" style="border:solid hidden; height:60px; background-color:black; opacity:0.5">
+<p style="text-align:center; color:white; font-size:30px; line-height:60px"><b> ZUMBA </b></p>
+</div>
+
+</div>
+</div>
+
+<div class="row">
+<div class="col-lg-12" style="border:solid hidden; height:450px; background-color:black; color:white">
+<p style="padding:20px; font-size:18px">
+<strong>Zumba is Fun: Join the Party</strong></p>
+<p style="font-size:18px">If you ask anyone that knows Zumba, they&rsquo;ll tell you it is all about the party, and having fun with a like minded group while you enjoy the moves that make you feel lighter than air. <br />
+<br />
+Zumba came a long way from Brazil, but it promises to stay and is more than your average fitness fad, it is a hobby that more and more are adopting, and with good reason since it packs health benefits and amazing fun into one easy to tackle package. <br />
+<br />
+By dancing Zumba, you&rsquo;ll be burning calories without even noticing, and you&rsquo;ll achieve your fitness goals in an enjoyable way. <br />
+<br />
+Discover why more and more people are jumping to the Zumba bandwagon and try it even if just once &ndash; we can guarantee that once you do it you won&rsquo;t ever look back. <br />
+<br />
+This is partially why Zumba is so successful and if you want to try it out, we definitely welcome you here at Burn Gym. <br />
+<br />
+Ready to enroll?
+</p>
+</div>
+</div>
+
+<div class="row">
+<div class="col-lg-12" style="border:solid hidden; height:100px; background-color:black; padding:20px">
+<p style="text-align:center; color:white"> &copy; Copyright 2017 Body Temple Fitness Club. All Rights Reserved.</p>
+<p style="text-align:center; color:white; padding:0px"> Designed by <b>Sukhpreet Kaur.</b> </p>
+
+
+</div>
+</div>
+
+</div>
+</body>
+</html>

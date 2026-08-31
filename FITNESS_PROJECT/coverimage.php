@@ -1,0 +1,34 @@
+<?php
+session_start();
+$c=mysqli_connect('localhost','root','','register');
+if(isset($_REQUEST['bt']))
+{
+	$a=$_FILES["b"]["name"];
+	
+	
+	$iji=$_SESSION['h'];
+	
+	
+	
+	
+	
+	move_uploaded_file($_FILES["b"]["tmp_name"], "uploadcover/" .$_FILES["b"]["name"]);
+	
+	$t="UPDATE reg SET coverimage='$a' WHERE id='$iji'";
+	mysqli_query($c,$t);
+	
+	header('location: profilepage.php');
+	
+}
+
+?>
+
+<html>
+<body>
+<form method="post" enctype="multipart/form-data">
+<input type="file" name="b">
+<input type="submit" name="bt">
+</form>
+</body>
+</html>
+
