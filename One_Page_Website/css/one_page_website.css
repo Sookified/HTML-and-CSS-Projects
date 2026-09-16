@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+/* changing the font and size od all text */
+body{
+     font-family: "Delius", cursive;
+    font-size: 18px;
+}
+
+/* Form styling */ 
+
+form { width: 400px; } 
+
+/* Set the width, margin, border, and border radius of inputs */ 
+input, textarea { 
+    width: 100%; 
+    margin: 8px 10px; 
+    border: 2px solid #555; 
+    border-radius: 8px; 
+    padding: 10px; 
+    box-sizing: border-box; 
+} 
+/* Style the submit and reset buttons */ 
+input[type="submit"], input[type="reset"] 
+{ 
+    width: auto; 
+    margin: 8px 5px 8px 0; 
+    padding: 10px 20px; 
+    border: 2px solid #555; 
+    border-radius: 8px; 
+    cursor: pointer; 
+}
