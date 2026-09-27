@@ -1,0 +1,12 @@
+  /* Normal paragraph color */
+        p {
+            color: black;
+            font-size: 20px;
+        }
+
+        /* Changes paragraph color when screen is smaller than 600px */
+        @media screen and (max-width: 600px) {
+            p {
+                color: blue;
+            }
+        }

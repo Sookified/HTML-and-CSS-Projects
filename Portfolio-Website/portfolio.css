@@ -1,0 +1,527 @@
+
+/* Applies box-sizing to all elements. This makes padding and borders included inside the element's total width and height. */
+* {
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling when clicking navigation links. overflow-x prevents unwanted horizontal scrolling. */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Main body styling */ 
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Sets the main font for the website. */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Sets the website background and text colors. */
+    background-color: #F8FAFC;
+    color: #172033;
+}
+
+/* NAVIGATION BAR */
+/* Creates a fixed navigation bar at the top of the browser window. */
+.Navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #172554;
+    /* Places navigation links in a row and centers them. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    /* Keeps the navbar above other elements. */
+    z-index: 1000;
+    box-shadow: 0 4px 18px rgba(23, 37, 84, 0.45);
+}
+
+/* Styles the individual navigation links. */
+.Navbar a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 15px 25px;
+    margin: 0 5px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 10px; /* Rounds the corners of the links. */
+    transition: all 0.3s ease; /* Makes hover changes happen smoothly. */
+}
+
+/* Changes the appearance of a navigation link when the mouse is placed over it. */
+.Navbar a:hover {
+    background-color: #F43F5E;
+    color: #FFFFFF;
+    transform: translateY(-4px); /* Moves the link slightly upward. */
+    box-shadow: 0 6px 18px rgba(244, 63, 94, 0.45); /* Adds a shadow around the hovered link. */
+}
+
+/* Styles the currently active navigation link. */
+.Navbar a.active {
+    background-color: #06B6D4;
+    color: #172033;
+    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.4);
+}
+
+/*HOME / BACKGROUND VIDEO */
+
+/* Creates the main Home section. position: relative allows the video and overlay to be positioned inside it. */
+#Home {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+}
+
+/* Makes the video fill the entire Home section. */
+#Typing_Video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps the video proportional while filling the available space. */
+}
+
+/* Creates a dark transparent layer over the video. This makes the text easier to read. */
+#Home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(23, 37, 84, 0.70);
+}
+
+/* VIDEO TEXT */
+
+   /* Positions the portfolio text in the center of the background video. */
+.Video_Text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Moves the box back by half its own width and height to center it. */
+    padding: 40px;
+    width: 80%;
+    max-width: 1100px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 20px;
+    background: rgba(23, 37, 84, 0.78); /* Creates a semi-transparent background. */
+    backdrop-filter: blur(6px); /* Adds a blur effect behind the text box. */
+    border: 2px solid #06B6D4;
+    box-shadow:
+        0 0 25px rgba(6, 182, 212, 0.45),
+        0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+/* Styles the main portfolio heading. */
+.Video_Text h1 {
+    font-size: 55px;
+    margin: 0 0 25px 0;
+    color: #FACC15;
+    text-shadow:
+        3px 3px 0 #F43F5E,
+        0 0 15px rgba(250, 204, 21, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* Adds an animation when the heading is hovered. */
+.Video_Text h1:hover {
+    transform: scale(1.08);
+    letter-spacing: 4px;
+    color: #06B6D4;
+    text-shadow:
+        3px 3px 0 #172554,
+        0 0 20px rgba(6, 182, 212, 0.7);
+}
+
+/* Styles paragraphs inside the video text box. */
+.Video_Text p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Styles the quotation inside the video section. */
+.Video_Text q {
+    font-style: italic;
+    color: #E0F2FE;
+}
+
+/* Centers text wherever this class is used. */
+.center {
+    text-align: center;
+}
+
+/* Makes text white. */
+.white-text {
+    color: #FFFFFF;
+}
+
+/* 
+   ROW SECTIONS */
+
+   /* Creates the main layout for each section. The flexbox properties center the columns. */
+.Row {
+    width: 100%;
+    min-height: 500px;
+    padding: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* About */
+#About {
+    background-color: #FFF1F2;
+    border-top: 5px solid #F43F5E;
+}
+
+/* GitHub */
+#GitHub {
+    background-color: #E0F2FE;
+    border-top: 5px solid #06B6D4;
+}
+
+/* Contact */
+#Contact {
+    background-color: #FFFBEB;
+    border-top: 5px solid #FACC15;
+}
+
+/* COLUMNS */
+
+   /* Creates two equal-width columns. */
+.Column_1,
+.Column_2 {
+    width: 50%;
+    padding: 40px;
+    display: flex; /* Uses flexbox to center content vertically and horizontally. */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*HEADINGS*/
+
+   /* Styles headings inside Column_1. */
+.Column_1 h1 {
+    font-size: 42px;
+    margin: 0 0 25px 0;
+    color: #172554;
+    transition: all 0.3s ease;
+}
+
+/* Heading hover */
+.Column_1 h1:hover {
+    color: #F43F5E;
+    transform: translateY(-5px); /* Moves the heading slightly upward. */
+    text-shadow:
+        2px 2px 5px rgba(244, 63, 94, 0.25);
+}
+
+/* PARAGRAPHS*/
+
+   /* Styles paragraphs inside Column_1. */
+.Column_1 p {
+    max-width: 700px;
+    margin: 12px auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #172033;
+    transition: all 0.3s ease;
+}
+
+/* Paragraph hover */
+.Column_1 p:hover {
+    color: #1D4ED8;
+    transform: translateY(-3px);
+}
+
+/*IMAGES*/
+
+   /* Styles images inside Column_2. */
+.Column_2 img {
+    display: block;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    padding: 6px;
+    border-radius: 20px;
+    border: 5px solid #06B6D4;
+    background-color: #FFFFFF;
+    box-shadow:
+        0 8px 25px rgba(23, 37, 84, 0.25);
+    transition: all 0.5s ease;
+}
+
+/* Image hover */
+.Column_2 img:hover {
+  transform: scale(1.08) rotate(2deg);
+    border-color: #F43F5E;
+    box-shadow: 0 15px 35px rgba(244, 63, 94, 0.35);
+    filter: brightness(1.05) saturate(1.15); /* Makes the image slightly brighter and more colorful. */
+} 
+
+/*  LINKS*/
+/* Styles links inside Column_1. */
+.Column_1 a {
+    display: inline-block;
+    color: #172554;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 22px;
+    border-radius: 30px;
+    border: 2px solid #1D4ED8;
+    background-color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+/* Link hover */
+.Column_1 a:hover {
+    background-color: #1D4ED8;
+    color: #FFFFFF;
+    border-color: #1D4ED8;
+    transform: scale(1.08);
+    box-shadow:
+        0 8px 20px rgba(29, 78, 216, 0.35);
+}
+
+/* GITHUB*/
+/* Gives the GitHub image a special size and gold border. */
+#GitHub .Column_2 img {
+    width: 80%;
+    max-width: 350px;
+    border-color: #FACC15;
+}
+
+/* GitHub hover */
+#GitHub .Column_2 img:hover {
+    transform: scale(1.15) rotate(-4deg);
+    border-color: #1D4ED8;
+    box-shadow:
+        0 15px 35px rgba(29, 78, 216, 0.4);
+}
+
+/*CONTACT FORM */
+/* Styles the entire contact form. */
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    border: 2px solid #06B6D4;
+    box-shadow:
+        0 8px 25px rgba(23, 37, 84, 0.18);
+}
+
+/* Labels */
+form label {
+    display: block;
+   margin: 15px 0 7px 0;
+    font-weight: bold;
+    color: #172554;
+    text-align: left;
+}
+
+/* Form inputs */
+form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 2px solid #CBD5E1;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: #F8FAFC;
+    color: #172033;
+    transition: all 0.3s ease;
+}
+
+/* Input hover */
+form input:hover {
+    border-color: #06B6D4;
+    background-color: #F0FDFA;
+    box-shadow:
+        0 0 8px rgba(6, 182, 212, 0.3);
+}
+
+/* Changes input appearance when selected or being typed into. */
+form input:focus {
+    outline: none;
+    border-color: #1D4ED8;
+    background-color: #FFFFFF;
+    box-shadow:
+        0 0 12px rgba(29, 78, 216, 0.3);
+    transform: scale(1.02);
+}
+
+/* SUBMIT BUTTON */
+/* Styles only the submit button. */
+form input[type="submit"] {
+    width: auto;
+    min-width: 150px;
+    margin-top: 10px;
+    background-color: #F43F5E;
+    color: #FFFFFF;
+    border: 2px solid #F43F5E;
+    font-weight: bold;
+    cursor: pointer; /* Changes the mouse pointer to a hand. */
+    transition: all 0.3s ease;
+}
+
+/* Submit hover */
+form input[type="submit"]:hover {
+    background-color: #172554;
+    border-color: #172554;
+    color: #FFFFFF;
+    transform: translateY(-5px) scale(1.08); /* Moves and enlarges the button slightly. */
+    box-shadow:
+        0 10px 20px rgba(23, 37, 84, 0.35);
+}
+
+/*FOOTER */
+
+footer {
+    width: 100%;
+    padding: 30px;
+    background-color: #172554;
+    color: #FFFFFF;
+    text-align: center;
+    border-top: 5px solid #06B6D4;
+}
+
+/* Removes the default paragraph margin inside the footer. */
+footer p {
+    margin: 0;
+}
+
+/* Styles links inside the footer. */
+footer a {
+    color: #FACC15;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Footer hover */
+footer a:hover {
+    color: #06B6D4;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+/*  TABLET RESPONSIVE DESIGN*/
+/* These styles apply when the screen width is 800px or smaller. */
+@media screen and (max-width: 800px) {
+    .Navbar { /* Allows the navigation links to move onto multiple lines if necessary. */
+        flex-wrap: wrap;
+     padding: 8px;
+    }
+
+    /* Makes navigation links smaller on tablet-sized screens. */
+    .Navbar a {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    #Home {
+        height: 600px;
+    }
+
+    /* Makes the video text box wider on smaller screens. */
+    .Video_Text {
+        width: 90%;
+        padding: 30px;
+    }
+
+    /* Reduces the portfolio heading size. */
+    .Video_Text h1 {
+        font-size: 38px;
+    }
+
+    .Video_Text p {
+        font-size: 15px;
+    }
+
+    /* Changes the two-column layout into a single-column layout. */
+    .Row {
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .Column_1,
+    .Column_2 {
+        width: 100%;
+        padding: 30px;
+    }
+/* Reduces section heading size. */
+    .Column_1 h1 {
+        font-size: 34px;
+    }
+
+    .Column_1 p {
+        font-size: 16px;
+    }
+
+    .Column_2 img {
+        width: 100%;
+    }
+}
+
+/* MOBILE DESIGN*/
+/* These styles apply when the screen width is 500px or smaller. */
+@media screen and (max-width: 500px) {
+    .Navbar a { /* Makes navigation links smaller for mobile phones. */
+        padding: 10px 8px;
+        margin: 2px;
+        font-size: 12px;
+    }
+
+    .Video_Text { /* Makes the video text box fit smaller mobile screens. */
+        width: 92%;
+        padding: 20px;
+    }
+
+    .Video_Text h1 {
+        font-size: 30px;
+    }
+
+    .Video_Text p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    /* Removes the minimum height and reduces section padding. */
+    .Row {
+        min-height: auto;
+        padding: 35px;
+    }
+
+    .Column_1,
+    .Column_2 {
+        padding: 20px;
+    }
+
+    .Column_1 h1 {
+        font-size: 30px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
+

@@ -1,0 +1,16 @@
+
+p {
+    font-size: 20px;
+    color: black;
+    background-color: lightgray;
+    padding: 15px;
+    width: 400px;
+    transition: 0.3s ease;
+}
+
+/* Hover effect for the paragraph */
+p:hover {
+    color: white;
+    background-color: blue;
+    transform: scale(1.05);
+}

@@ -1,0 +1,19 @@
+/* Create a border around the table and cells */
+table, th, td {
+    border: 2px solid black;
+}
+
+/* Remove spaces between table borders */
+table {
+    border-collapse: collapse;
+}
+
+/* Add padding inside the cells */
+th, td {
+    padding: 10px;
+}
+
+/* Add a background color to the top row */
+th {
+    background-color: lightblue;
+}

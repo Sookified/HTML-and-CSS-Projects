@@ -1,0 +1,12 @@
+
+/* Center the image */
+.image-container {
+    text-align: center;
+}
+
+/* Apply a CSS filter and rounded edges */
+.image-container img {
+    width: 500px;
+    filter: grayscale(50%);
+    border-radius: 20px;
+}

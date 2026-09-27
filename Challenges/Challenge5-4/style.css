@@ -1,0 +1,32 @@
+/* Container for the image and text */
+.image-container {
+    position: relative;
+    width: 700px;
+}
+
+/* Style the image */
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+/* Place text over the image */
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+/* Style the heading */
+.image-text h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+/* Style the paragraph */
+.image-text p {
+    font-size: 24px;
+}

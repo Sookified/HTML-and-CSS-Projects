@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Sukhpreet Kaur</title>
+        <link rel="stylesheet" type="text/css" href="portfolio.css">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+        
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!--Breaks inserted to add space between navbar and the first heading-->
+        <br>
+        <br>
+
+        <!--Background video-->
+        <div id="Home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="videos/video.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>x
+
+        <!--Video text-->
+        <div class="Video_Text">
+            <h1 class="white-text">Sukhpreet's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”
+
+                    </q>
+                    <br> — Martin Fowler
+                    <br>
+                    <br> Hello! My name is Sukhpreet. Welcome to my portfolio website. 
+                    <br>
+                    <br> I am passionate about technology, programming, and creating websites.
+                    <br>
+                    <br>
+                </p>
+            </strong>
+        </div>
+
+        <!--About section-->
+        <div class="Row" id="About">
+            <!--Left column-->
+            <div class="Column_2">
+                <img src="images/aboutme.jpg" alt="Replace with your own image and description">
+            </div>
+            <!--Right column-->
+            <div class="Column_1">
+                <h1>About Me</h1> 
+                <p> Hello! My name is Sukhpreet Kaur. 
+                    I am a software developer who enjoys learning about technology and creating websites. 
+                </p> 
+                <p> I am currently developing my skills in HTML, CSS, JavaScript, SQL, 
+                    C#, and other programming technologies. 
+                </p> 
+                
+                <p> I would love the opportunity to work on interesting software and 
+                    web development projects. 
+                </p> 
+                <p class="center"> <a href="#Contact">Contact Me</a> </p>
+            </div>
+        </div>
+
+        <!--GitHub section-->
+        <div class="Row" id="GitHub">
+            <!--Left column-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p>
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/Sookified" target="_blank">Sookified</a></p>
+                </p>
+            </div>
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="https://github.com/Sookified" target="_blank"><img src="images/github.jpg" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!--Contact section-->
+        <div class="Row" id="Contact">
+            <!--Contact image, left column-->
+            <div class="Column_2 Column_tall">
+                <img src="images/contact-us.jpg" alt="Contact_Image">
+            </div>
+            <!--Contact form, right column-->
+            <div class="Column_1 Column_tall">
+                <h1>Contact</h1>
+                <!--This specifies where and how to send the form data; we are leaving it blank-->
+                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!--Footer section-->
+        <footer>
+            <p>
+                <p>&copy Sukhpreet Kaur. All Rights Reserved.</a></p>
+                <br>
+            </p>
+        </footer>
+    </body>
+</html>
